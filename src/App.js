@@ -7,7 +7,7 @@ function App() {
     const[posts,setPosts]= useState([])
     const[loading,setLoading]= useState(false)
     const[currentPage,setCurrentPage]= useState(1)
-    const[postsPerPage,setPostsPerPage]= useState(10)
+    const[postsPerPage,setPostsPerPage]= useState(15)
 
     useEffect(()=>{
         const fetchPosts = async () => {
@@ -24,6 +24,7 @@ function App() {
 
   return (
     <div className="App">
+        <h1>Pagination example</h1>
       <header className="App-header">
         <Posts posts={currentPosts} loading={loading}/>
           <Pagination postPerPage={postsPerPage} totalPosts={posts.length} paginate={(val=>setCurrentPage(val))}/>
