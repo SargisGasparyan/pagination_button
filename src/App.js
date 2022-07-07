@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-        <h1>Pagination example</h1>
+        <h1>Pagination example...</h1>
       <header className="App-header">
         <Posts posts={currentPosts} loading={loading}/>
           <Pagination postPerPage={postsPerPage} totalPosts={posts.length} paginate={(val=>setCurrentPage(val))}/>
